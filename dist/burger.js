@@ -109,13 +109,17 @@ window.addEventListener('scroll', scroolHeader);
 const navBarLink = document.querySelectorAll('.nav__link');
 
 navBarLink.forEach(bar => {
-    bar.classList.remove('text-secondaryColor');
     bar.addEventListener('click', () => {
-        if (!bar.classList.contains('text-secondaryColor')) {
-        bar.classList.add('text-secondaryColor')
-     }
-    })
-})
+        removeActive();
+        bar.classList.add('active');
+    });
+});
+
+function removeActive() {
+    navBarLink.forEach(link => {
+        link.classList.remove('active')
+    });
+};
 
 
 
