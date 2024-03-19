@@ -50,58 +50,72 @@ tabButton.forEach(tab =>{
             item.style.display = 'block'
         })}
     })
-    });
+});
 
 
-    const html = document.querySelector('html');
-    const themeBtn = document.getElementById('theme-toggle');
+const html = document.querySelector('html');
+const themeBtn = document.getElementById('theme-toggle');
 
-    if (localStorage.getItem('mode') === 'dark') {
+if (localStorage.getItem('mode') === 'dark') {
         darkMode();
     } else {
         lightMode();
     }
 
-    themeBtn.addEventListener('click', () => {
-        if (localStorage.getItem('mode') === 'light') {
-            darkMode();
-        } else {
-            lightMode();
-        }
+themeBtn.addEventListener('click', () => {
+if (localStorage.getItem('mode') === 'light') {
+        darkMode();
+    } else {
+        lightMode();
+    }
+})
+
+function darkMode() {
+    html.classList.add('dark');
+    themeBtn.classList.replace('ri-moon-fill', 'ri-sun-fill');
+    localStorage.setItem('mode', 'dark');
+};
+
+function lightMode() {
+    html.classList.remove('dark');
+    themeBtn.classList.replace('ri-sun-fill', 'ri-moon-fill');
+    localStorage.setItem('mode', 'light');
+};
+
+function scrollUp() {
+    const scrollBtn = document.getElementById('scroll-up');
+
+    if (this.scrollY >= 250) {
+        scrollBtn.classList.remove('-bottom-1/2');
+        scrollBtn.classList.add('bottom-4');
+    } else {
+        scrollBtn.classList.add('-bottom-1/2');
+        scrollBtn.classList.remove('bottom-4')
+    }
+}
+window.addEventListener('scroll', scrollUp);
+
+function scroolHeader() {
+    const header = document.getElementById('header');
+
+    if (this.scrollY >= 50) {
+        header.classList.add('border-b', 'border-secondaryColor');
+    } else {
+        header.classList.remove('border-b', 'border-secondaryColor');
+    }
+}
+window.addEventListener('scroll', scroolHeader);
+
+const navBarLink = document.querySelectorAll('.nav__link');
+
+navBarLink.forEach(bar => {
+    bar.classList.remove('text-secondaryColor');
+    bar.addEventListener('click', () => {
+        if (!bar.classList.contains('text-secondaryColor')) {
+        bar.classList.add('text-secondaryColor')
+     }
     })
+})
 
-    function darkMode() {
-        html.classList.add('dark');
-        themeBtn.classList.replace('ri-moon-fill', 'ri-sun-fill');
-        localStorage.setItem('mode', 'dark');
-    };
 
-    function lightMode() {
-        html.classList.remove('dark');
-        themeBtn.classList.replace('ri-sun-fill', 'ri-moon-fill');
-        localStorage.setItem('mode', 'light');
-    };
 
-    function scrollUp() {
-        const scrollBtn = document.getElementById('scroll-up');
-
-        if (this.scrollY >= 250) {
-            scrollBtn.classList.remove('-bottom-1/2');
-            scrollBtn.classList.add('bottom-4');
-        } else {
-            scrollBtn.classList.add('-bottom-1/2');
-            scrollBtn.classList.remove('bottom-4')
-        }
-    }
-    window.addEventListener('scroll', scrollUp);
-
-    function scroolHeader() {
-        const header = document.getElementById('header');
-
-        if (this.scrollY >= 50) {
-            header.classList.add('border-b', 'border-secondaryColor');
-        } else {
-            header.classList.remove('border-b', 'border-secondaryColor');
-        }
-    }
-    window.addEventListener('scroll', scroolHeader)
