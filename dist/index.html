@@ -45,9 +45,9 @@
             <section id="home">
                 <div class="container flex flex-col items-center gap-10 md:flex-row">
                     <div class="mx-auto md:basis-1/2 lg:basis-2/5 animate-movingY">
-                        <img src="./images/burger-PhotoRoom (1).png" alt="home image" class="w-60 md:w-full">
+                        <img src="./images/burger-PhotoRoom (1).png" alt="home image" class="home__image w-60 md:w-full">
                     </div>
-                    <div class=" text-center md:basis-1/2 md:text-start lg:basis-3/5">
+                    <div class=" text-center md:basis-1/2 md:text-start lg:basis-3/5 home__info">
                         <h1 class="home_title">happy tummy with tasty burgers.</h1>
                         <div class="separator mx-auto md:mx-0"></div>
                         <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum iure voluptas, cupiditate vero fugiat soluta, suscipit modi, veniam non dolorum id autem illo ipsa aut libero aspernatur hic laborum delectus nulla ad vitae at sapiente incidunt. Minus itaque fugiat quam eveniet nostrum qui, consequuntur officiis pariatur omnis voluptate magni esse?</p>
@@ -72,7 +72,7 @@
 
             <section id="category">
                 <div class="container flex flex-col gap-5 md:flex-row">
-                    <div class="flex items-center py-3 rounded-lg overflow-hidden bg-secondaryColor md:flex-1">
+                    <div class="category__card flex items-center py-3 rounded-lg overflow-hidden bg-secondaryColor md:flex-1">
                         <div class="basis-1/3 relative">
                             <img src="./images/photo-delicious-hamburger-isolated-white-background001.png" alt="category burger image" class="absolute -bottom-16 -left-12 w-full md:-bottom-14 md:-left-6 md:w-24">
                         </div>
@@ -86,7 +86,7 @@
                         </div>
                     </div>
                 
-                    <div class="flex items-center py-3 rounded-lg overflow-hidden bg-redColor md:flex-1">
+                    <div class="category__card flex items-center py-3 rounded-lg overflow-hidden bg-redColor md:flex-1">
                         <div class="basis-1/3 relative">
                             <img src="./images/chip-slice-yellow-prepared-junk.png" alt="category snack image" class="absolute -bottom-16 -left-12 w-full md:-bottom-14 md:-left-6 md:w-24">
                         </div>
@@ -100,7 +100,7 @@
                         </div>
                     </div>
 
-                    <div class="flex items-center py-3 rounded-lg overflow-hidden bg-greenColor flex-1">
+                    <div class="category__card flex items-center py-3 rounded-lg overflow-hidden bg-greenColor flex-1">
                         <div class="basis-1/3 relative">
                             <img src="./images/front-close-view-organic-fresh-juices-bottles-served-with-tubes-fruits-wooden-cutting-board-brown-table.png" alt="category burger image" class="absolute -bottom-16 -left-4 w-36 md:-bottom-14 md:-left-6 md:w-24">
                         </div>
@@ -118,7 +118,7 @@
 
             <section id="promo">
                 <div class="container flex flex-col gap-5 lg:gap-10 lg:flex-row">
-                    <div class="bg-primaryColorLight dark:bg-darkColorLight flex flex-col p-5 rounded-lg md:flex-row items-center lg:flex-row-reverse lg:flex-1">
+                    <div class="promo__card1 bg-primaryColorLight dark:bg-darkColorLight flex flex-col p-5 rounded-lg md:flex-row items-center lg:flex-row-reverse lg:flex-1">
                         <img src="./images/burger-PhotoRoom (1).png" alt="promo burger image" class="w-40 mx-auto hover:animate-movingY md:mx-5">
                         <div class="space-y-2 pt-5 md:pt-0">
                             <p class="text-xs text-secondaryColor">Payday promo</p>
@@ -128,7 +128,7 @@
                         </div>
                     </div>
 
-                    <div class="bg-primaryColorLight dark:bg-darkColorLight flex flex-col p-5 rounded-lg md:flex-row items-center lg:flex-row-reverse lg:flex-1">
+                    <div class="promo__card2 bg-primaryColorLight dark:bg-darkColorLight flex flex-col p-5 rounded-lg md:flex-row items-center lg:flex-row-reverse lg:flex-1">
                         <img src="./images/ice-falling-brown-drink.png" alt="promo burger image" class="w-40 mx-auto hover:animate-movingY md:mx-5">
                         <div class="space-y-2 pt-5 md:pt-0">
                             <p class="text-xs text-secondaryColor">Payday promo</p>
@@ -142,10 +142,10 @@
 
             <section id="about">
                 <div class="container flex flex-col gap-10 md:flex-row">
-                    <div class="flex-1">
+                    <div class="about__image flex-1">
                         <img src="./images/fast-food-table.jpg" alt="fast food table image" class="rounded-lg">
                     </div>
-                    <div class="flex-1">
+                    <div class="about__info flex-1">
                         <h2 class="section_title">find food and drinks, all-in-one place for your best taste.</h2>
                         <div class="separator"></div>
                         <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non consequuntur necessitatibus deleniti nulla reiciendis veniam omnis iusto ducimus. Tempore mollitia facere aperiam nobis minima.</p>
@@ -183,7 +183,7 @@
                         </ul>
                         </div>
                     </div>
-                    <div>
+                    <div class="menu__items">
                         <ul class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4 lg:gap-12">
                             <li class="item_wrap food">
                                 <div class="h-56 grid place-items-center bg-primaryColorLight dark:bg-darkColorLight dark:hover:bg-secondaryColor rounded-3xl hover:bg-secondaryColor ease-linear duration-200 cursor-pointer lg:h-40">
@@ -371,7 +371,7 @@
             </section>
 
             <section id="review" class="bg-primaryColorLight dark:bg-darkColorLight py-20">
-                <div class="container">
+                <div class="customer__review container">
                     <div class="max-w-md mx-auto text-center">
                         <h2 class="section_title">customer review</h2>
                         <div class="separator mx-auto"></div>
@@ -469,7 +469,7 @@
      </main>
 
      <footer>
-            <div class="container">
+            <div class="footer container">
                 <ul class="grid grid-cols-1 items-start gap-5 pb-5 md:grid-cols-2 lg:grid lg:grid-cols-4">
                     <li>
                         <div class="space-y-3">
@@ -540,39 +540,41 @@
 
 
 
-     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-     <script>
+    <script>
         const swiper = new Swiper('.swiper', {
             speed: 400,
             spaceBetween: 30,
             autoplay: {
             delay: 3000,
             disableOnInteraction: false
- },
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true
-  },
-  grabCursor: true,
-  breakpoints: {
-    // when window width is >= 640px
-    640: {
-      slidesPerView: 1,
-    },
-    // when window width is >= 768px
-    768: {
-      slidesPerView: 2,
-    },
-    // when window width is >= 1024px
-    1024: {
-      slidesPerView: 3,
-    }
-  }
-});
-     </script>
+        },
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
+        grabCursor: true,
+        breakpoints: {
+            // when window width is >= 640px
+            640: {
+            slidesPerView: 1,
+            },
+            // when window width is >= 768px
+            768: {
+            slidesPerView: 2,
+            },
+            // when window width is >= 1024px
+            1024: {
+            slidesPerView: 3,
+            }
+        }
+        }); 
+    </script>
+    
+    <script src="https://unpkg.com/scrollreveal"></script>
 
-     <script src="burger.js"></script>
+    <script src="burger.js"></script>
 </body>
 </html>

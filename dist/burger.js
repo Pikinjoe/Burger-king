@@ -1,3 +1,5 @@
+// Menu and navigation link
+
 const closeMenu = document.querySelector('.closeMenu');
 const menuNav = document.querySelector('.menuNav');
 const menuBar = document.querySelector('.menu-bar');
@@ -15,6 +17,7 @@ navLink.forEach((link) => {
     })
 });
 
+// menu tab
 const tabButton = document.querySelectorAll('.tabs-wrap ul li');
 const all = document.querySelectorAll('.item_wrap');
 const foods = document.querySelectorAll('.food');
@@ -52,7 +55,7 @@ tabButton.forEach(tab =>{
     })
 });
 
-
+// Dark mode toggle
 const html = document.querySelector('html');
 const themeBtn = document.getElementById('theme-toggle');
 
@@ -82,6 +85,7 @@ function lightMode() {
     localStorage.setItem('mode', 'light');
 };
 
+// scroll button and styling
 function scrollUp() {
     const scrollBtn = document.getElementById('scroll-up');
 
@@ -95,6 +99,7 @@ function scrollUp() {
 }
 window.addEventListener('scroll', scrollUp);
 
+// scroll heading styling
 function scroolHeader() {
     const header = document.getElementById('header');
 
@@ -106,6 +111,7 @@ function scroolHeader() {
 }
 window.addEventListener('scroll', scroolHeader);
 
+// Nav active styling
 const navBarLink = document.querySelectorAll('.nav__link');
 
 navBarLink.forEach(bar => {
@@ -120,6 +126,37 @@ function removeActive() {
         link.classList.remove('active')
     });
 };
+
+// Scroll review
+
+const sr = ScrollReveal({
+    origin: "top",
+    distance: "60px",
+    duration: 2500,
+    delay: 400,
+    reset: true
+});
+
+sr.reveal(".home__image");
+sr.reveal(".home__info", {origin: "bottom"});
+
+sr.reveal(".category__card", {interval: 300});
+
+sr.reveal(".promo__card1", {origin: "left"});
+sr.reveal(".promo__card2", {origin: "right"});
+
+sr.reveal(".about__image", {origin: "bottom"});
+sr.reveal(".about__info", {origin: "top"});
+
+sr.reveal(".menu__items", {origin: "left"});
+
+sr.reveal(".customer__review", {origin: "right"});
+
+sr.reveal(".footer");
+
+
+
+
 
 
 
